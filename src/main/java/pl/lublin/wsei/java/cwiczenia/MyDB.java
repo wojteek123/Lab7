@@ -6,7 +6,8 @@ import java.sql.SQLException;
 import java.util.Properties;
 
 public class MyDB {
-    private:
+
+    private
     String DBAdress;
     String DBName;
     Number port;
@@ -28,21 +29,19 @@ public class MyDB {
             System.out.printf("blad");
             conn = null;
         }
-
-
         System.out.printf("Connected");
 
     }
-    public:
+    public
     MyDB(String adres,String nazwa,Number port){
         this.DBAdress=adres;
         this.port=port;
         this.DBName=nazwa;
     }
-    void setUser(String u){
+    public void setUser(String u){
         this.user=u;
     }
-    void setPasssword(String p){
+    public void setPasssword(String p){
         this.passsword=p;
     }
     Connection getConnection(){
