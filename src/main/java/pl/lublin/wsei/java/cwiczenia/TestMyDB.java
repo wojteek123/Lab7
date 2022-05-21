@@ -11,6 +11,8 @@ public class TestMyDB {
         if(conn!=null){
             System.out.printf("udalo sie");
         }
+        dataBase.closeConnection();
+        System.out.printf("polacznie zakoncvzone");
     }
 
 

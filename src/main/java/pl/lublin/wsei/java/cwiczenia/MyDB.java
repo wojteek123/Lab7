@@ -32,8 +32,17 @@ public class MyDB {
         System.out.printf("Connected");
 
     }
-    public
-    MyDB(String adres,String nazwa,Number port){
+    void closeConnection(){
+        if(conn!=null){
+            try{
+                conn.close();
+            }catch(SQLException e){
+                System.out.printf("nie udalo sie zamknac poloczenia");
+            }
+        }
+        conn=null;
+    }
+    public MyDB(String adres,String nazwa,Number port){
         this.DBAdress=adres;
         this.port=port;
         this.DBName=nazwa;
